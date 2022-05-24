@@ -41,14 +41,14 @@ public class MaquinaLavar {
 				System.out.println("==========================================");
 				System.out.println("     CONFIGURAR DA MÁQUINA DE LAVAR");
 				System.out.println("==========================================");
+				entrada.nextLine();	
 				System.out.println("Modelo: ");
 				modelo = entrada.nextLine();
-				entrada.nextLine();	
 				System.out.println("Voltagem:");
 				voltagem = entrada.nextInt();
+				entrada.nextLine();	
 				System.out.println("Nome: ");
 				nome = entrada.nextLine();
-				entrada.nextLine();	
 				System.out.println("Quantos kg?");
 				kg = entrada.nextInt();
 				System.out.println("Duação estágio 1 - Lavação Pesada: ");
@@ -101,60 +101,73 @@ public class MaquinaLavar {
 					System.out.println("Selecione o estágio inicial: ");
 					int inicial = entrada.nextInt();
 					
-					if (inicial == 1) {
-				        float porcentagem = 0;
-				        float score = 0;
-				     				        
+					float porcentagem = 0;
+			        float score = 0;
+			     				       
+					switch (inicial) {
+					
+					case 1: 
+						 
 				        while (porcentagem < 100) {
 				        	porcentagem = (score*50)/pesada;
 				        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
 				        	Thread.sleep(500);
 				        	score++;
-				        }   
-					} else if (inicial == 2) {
-						float porcentagem = 0;
-				        float score = 0;
-				     				     				        	 
-						        while (porcentagem < 100) {
-						        	porcentagem = (score*50)/normal;
-						        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
-						        	Thread.sleep(500);
-						        	score++;
-						        }
-					} else if (inicial == 3) {
-						float porcentagem = 0;
-				        float score = 0;
-				     				     
-							        while (porcentagem < 100) {
-							        	porcentagem = (score*50)/rapida;
-							        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
-							        	Thread.sleep(500);
-							        	score++;
-							        }
-					} else if (inicial == 4) {
-						float porcentagem = 0;
-				        float score = 0;
-				     				        while (porcentagem < 100) {
-								        	porcentagem = (score*50)/enxague;
-								        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
-								        	Thread.sleep(500);
-								        	score++;
-								        }
-					} else if (inicial == 5) {
-						float porcentagem = 0;
-				        float score = 0;
-				     				     
-									        while (porcentagem < 100) {
-									        	porcentagem = (score*50)/centrifugacao;
-									        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
-									        	Thread.sleep(500);
-									        	score++;
-									        }
+				        }
+				        porcentagem = 0;
+						score = 0;
+						System.out.println("  ");
+						
+								
+					case 2: 
+						while (porcentagem < 100) {
+							porcentagem = (score*50)/normal;
+							System.out.println("Estágio 2 - Em lavação normal: " + porcentagem + "%");
+							Thread.sleep(500);
+							score++;
+						  }
+						porcentagem = 0;
+						score = 0;
+						System.out.println("  ");
+						  
+					case 3: 
+								     				     
+				        while (porcentagem < 100) {
+				        	porcentagem = (score*50)/rapida;
+				        	System.out.println("Estágio 3 - Em lavação rápida: " + porcentagem + "%");
+				        	Thread.sleep(500);
+				        	score++;
+						}
+				        porcentagem = 0;
+						score = 0;
+						System.out.println("  ");
 				        
-						               }
-				                   
+					case 4: 
+						while (porcentagem < 100) {
+							porcentagem = (score*50)/enxague;
+							System.out.println("Estágio 4 - Em enxágue: " + porcentagem + "%");
+							Thread.sleep(500);
+							score++;
+						}
+						porcentagem = 0;
+						score = 0;
+						System.out.println("  ");
+												
+					case 5: 
+						 while (porcentagem < 100) {
+						 porcentagem = (score*50)/centrifugacao;
+						System.out.println("Estágio 5 - Em centrifugação: " + porcentagem + "%");
+						Thread.sleep(500);
+						score++;
+						}
+						break;
+				                 
+				    default:
+				    	System.out.println("Escolha uma opção existente no menu: ");
+				    	break;
+					}
 				} else {
-				System.out.println("Configure a máquina primeiro");
+					System.out.println("Você deve configurar primeiro");
 				}
 				break;
 			
@@ -165,11 +178,10 @@ public class MaquinaLavar {
 			default:
 				System.out.println("Escolha uma das opções existentes");
 				break;
-			
 		}
 		
-
 	} while (codigo != 0);
 
+		}
 	}
-}
+
