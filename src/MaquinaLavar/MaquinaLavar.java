@@ -110,33 +110,40 @@ public class MaquinaLavar {
 				        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
 				        	Thread.sleep(500);
 				        	score++;
-				        }
-				        if (inicial == 2) {
-				        	 
+				        }   
+					} else if (inicial == 2) {
+						float porcentagem = 0;
+				        float score = 0;
+				     				     				        	 
 						        while (porcentagem < 100) {
 						        	porcentagem = (score*50)/normal;
 						        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
 						        	Thread.sleep(500);
 						        	score++;
 						        }
-						        if (inicial == 3) {
-		        	 		        
+					} else if (inicial == 3) {
+						float porcentagem = 0;
+				        float score = 0;
+				     				     
 							        while (porcentagem < 100) {
 							        	porcentagem = (score*50)/rapida;
 							        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
 							        	Thread.sleep(500);
 							        	score++;
 							        }
-							        if (inicial == 4) {
-			        	 		        
-								        while (porcentagem < 100) {
+					} else if (inicial == 4) {
+						float porcentagem = 0;
+				        float score = 0;
+				     				        while (porcentagem < 100) {
 								        	porcentagem = (score*50)/enxague;
 								        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
 								        	Thread.sleep(500);
 								        	score++;
 								        }
-								        if (inicial == 5) {
-				        	 		        
+					} else if (inicial == 5) {
+						float porcentagem = 0;
+				        float score = 0;
+				     				     
 									        while (porcentagem < 100) {
 									        	porcentagem = (score*50)/centrifugacao;
 									        	System.out.println("Estágio 1 - Em lavação pesada: " + porcentagem + "%");
@@ -145,11 +152,7 @@ public class MaquinaLavar {
 									        }
 				        
 						               }
-				                   } 
-				        
-					             }
-				        }
-				}
+				                   
 				} else {
 				System.out.println("Configure a máquina primeiro");
 				}
