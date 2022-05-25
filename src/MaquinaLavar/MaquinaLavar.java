@@ -3,7 +3,6 @@
  */
 package MaquinaLavar;
 
-import java.time.Duration;
 import java.util.Scanner;
 
 /**
@@ -14,7 +13,7 @@ public class MaquinaLavar {
 
 	/**
 	 * @param args
-	 * @throws InterruptedException 
+	 * 
 	 */
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -63,7 +62,7 @@ public class MaquinaLavar {
 				centrifugacao = entrada.nextInt();
 				
 				System.out.println("==========================================");
-				System.out.println("     CONFIGURAÇÃO DA MÁQUINA DE LAVAR");
+				System.out.println("          CONFIRMAR CONFIGURAÇÃO ");
 				System.out.println("==========================================");
 				
 				System.out.println("Modelo: " + modelo);
@@ -91,6 +90,8 @@ public class MaquinaLavar {
 					System.out.println("=======================================================");
 					System.out.println("   ");
 					System.out.println("Simulando máquina Modelo: " + modelo + " - " + nome + " - " + kg + " - " + "Voltagem: " + voltagem);
+					System.out.println("  ");
+					System.out.println("=========================================================================================");
 					System.out.println("QUAL ESTÁGIO VOCÊ DESEJA COMEÇAR?");
 					System.out.println("\n"
 				                + "1 - Lavagem Pesada\n"
